@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DepositoController">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="600.0">
+         <top>
+            <MenuBar prefHeight="25.0" prefWidth="463.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Archivo">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Editar">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Ayuda">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <AnchorPane prefHeight="500.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <GridPane layoutX="16.0" layoutY="34.0" prefHeight="172.0" prefWidth="439.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="182.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.0" minWidth="10.0" prefWidth="195.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="139.0" minWidth="10.0" prefWidth="45.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Numero de Cuenta:" GridPane.rowIndex="1" />
+                        <Label text="Cantidad a Depositar:" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtNumeroCuenta" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="DEPOSITO" />
+                        <TextField fx:id="txtCantidadDeposito" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtNombreDepositante" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label text="Nombre Depositante:" GridPane.rowIndex="3" />
+                        <ImageView fitHeight="28.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <ImageView fx:id="ivErrorNumeroCuenta" fitHeight="46.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <ImageView fx:id="ivErrorCantidadDeposito" fitHeight="46.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <ImageView fx:id="ivErrorNombreDepositante" fitHeight="43.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+                  <Button layoutX="463.0" layoutY="75.0" mnemonicParsing="false" onAction="#buscarCliente" prefHeight="45.0" prefWidth="98.0" text="Buscar" />
+                  <Button layoutX="462.0" layoutY="126.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="100.0" text="Cancelar" />
+                  <TableView fx:id="tblDeposito" layoutX="20.0" layoutY="261.0" prefHeight="200.0" prefWidth="555.0">
+                    <columns>
+                      <TableColumn fx:id="columnaFecha" prefWidth="103.0" text="FECHA" />
+                        <TableColumn fx:id="columnaSaldoAnterior" prefWidth="116.0" text="SALDO ANTERIOR" />
+                      <TableColumn fx:id="columnaDeposito" prefWidth="110.0" text="DEPOSITO" />
+                        <TableColumn fx:id="columnaSaldoActual" prefWidth="99.0" text="SALDO ACTUAL" />
+                        <TableColumn fx:id="columnaMensaje" prefWidth="125.0" text="MENSAJE" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="27.0" layoutY="229.0" text="Nombre Cliente:" />
+                  <Label fx:id="lblNombreCliente" layoutX="148.0" layoutY="229.0" text="Label" />
+                  <Button fx:id="btnAceptar" layoutX="462.0" layoutY="213.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="40.0" prefWidth="99.0" text="Aceptar" />
+                  <Separator prefHeight="2.0" prefWidth="600.0" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

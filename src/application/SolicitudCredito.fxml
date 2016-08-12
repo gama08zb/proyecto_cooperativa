@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SolicitudCreditoController">
+   <children>
+      <BorderPane layoutX="6.0" prefHeight="600.0" prefWidth="1000.0">
+         <top>
+            <MenuBar prefHeight="25.0" prefWidth="500.0" BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Archivo">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Nuevo" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Editar">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Ayuda">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <SplitPane dividerPositions="0.45190380761523047" prefHeight="579.0" prefWidth="1000.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <GridPane layoutX="7.0" layoutY="15.0" prefHeight="546.0" prefWidth="438.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="154.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="269.0" minWidth="10.0" prefWidth="247.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="157.0" minWidth="10.0" prefWidth="54.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Nombre Proyecto: " GridPane.rowIndex="4" />
+                                    <Label text="Descripcion:" GridPane.rowIndex="5" />
+                                    <Label text="GARANTIA" GridPane.rowIndex="6" />
+                                    <Label text="Tipo Garantia:" GridPane.rowIndex="7" />
+                                    <Label fx:id="lblNombreAval1" text="Label" GridPane.rowIndex="8" />
+                                    <Label fx:id="lblTelefonoAval1" text="Label" GridPane.rowIndex="10" />
+                                    <Label fx:id="lblCelularAval1" text="Label" GridPane.rowIndex="11" />
+                                    <Label fx:id="lblDireccionAval1" text="Label" GridPane.rowIndex="12" />
+                                    <Label fx:id="lblNombreAval2" text="Label" GridPane.rowIndex="13" />
+                                    <Label fx:id="lblTelefonoAval2" text="Label" GridPane.rowIndex="15" />
+                                    <Label fx:id="lblCelularAval2" text="Label" GridPane.rowIndex="16" />
+                                    <Label fx:id="lblDireccionAval2" text="Label" GridPane.rowIndex="17" />
+                                    <TextField fx:id="txtNombreProyecto" onAction="#restablecerTextField" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField fx:id="txtDescripcionProyecto" onAction="#restablecerTextField" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <TextField fx:id="txtNombreAval1" onAction="#restablecerTextField" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    <TextField fx:id="txtTelefonoAval1" onAction="#restablecerTextField" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                    <TextField fx:id="txtCelularAval1" onAction="#restablecerTextField" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                    <TextField fx:id="txtDireccionAval1" onAction="#restablecerTextField" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                                    <TextField fx:id="txtNombreAval2" onAction="#restablecerTextField" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                                    <TextField fx:id="txtTelefonoAval2" onAction="#restablecerTextField" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+                                    <TextField fx:id="txtCelularAval2" onAction="#restablecerTextField" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+                                    <TextField fx:id="txtDireccionAval2" onAction="#restablecerTextField" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="17" />
+                                    <Label text="INFORMACION PROYECTO" GridPane.rowIndex="3" />
+                                    <ComboBox fx:id="cboTipoGarantia" onAction="#restablecerTextField" prefHeight="25.0" prefWidth="248.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <Label fx:id="lblDescripcionGarantia" text="Label" GridPane.rowIndex="18" />
+                                    <TextArea fx:id="txaDescripcionGarantia" onMouseClicked="#restablecerTextField" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="18" />
+                                    <Label text="Numero de Cliente: " />
+                                    <TextField fx:id="txtCodigoCliente" onAction="#restablecerTextField" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" />
+                                    <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#buscarCliente" text="Buscar" GridPane.rowIndex="1" />
+                                    <Label fx:id="lblMensaje" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <ImageView fx:id="ivErrorNumeroCliente" fitHeight="29.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+                                    <ImageView fx:id="ivErrorNombreProyecto" fitHeight="29.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <ImageView fx:id="ivErrorDescripcionProyecto" fitHeight="31.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <ImageView fx:id="ivErrorTipoGarantia" fitHeight="28.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                    <ImageView fx:id="ivErrorNombreAval1" fitHeight="31.0" fitWidth="54.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                    <ImageView fx:id="ivErrorTelefonoAval1" fitHeight="32.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                                    <ImageView fx:id="ivErrorCelularAval1" fitHeight="32.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                                    <ImageView fitHeight="29.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="18" />
+                                    <ImageView fx:id="ivErrorDireccionAval1" fitHeight="28.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                                    <ImageView fx:id="ivErrorNumeroIdentidadAval2" fitHeight="34.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+                                    <ImageView fx:id="ivErrorCelularAval2" fitHeight="28.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="16" />
+                                    <ImageView fx:id="ivErrorTelefonoAval2" fitHeight="31.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="15" />
+                                    <ImageView fx:id="ivErrorDireccionAval2" fitHeight="31.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="17" />
+                                    <TextField fx:id="txtNumeroIdentidadAval1" onAction="#restablecerTextField" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                    <Label fx:id="lblNumeroIdentidadAval1" text="Label" GridPane.rowIndex="9" />
+                                    <Label fx:id="lblNumeroIdentidadAval2" text="Label" GridPane.rowIndex="14" />
+                                    <TextField fx:id="txtNumeroIdentidadAval2" onAction="#restablecerTextField" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                                    <ImageView fx:id="ivErrorNumeroIdentidadAval1" fitHeight="30.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                                    <ImageView fx:id="ivErrorNombreAval2" fitHeight="30.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="519.0">
+                           <children>
+                              <Button fx:id="btnAceptar" layoutX="125.0" layoutY="516.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="47.0" prefWidth="116.0" text="Solicitar Prestamo" />
+                              <GridPane layoutX="14.0" layoutY="14.0" prefHeight="175.0" prefWidth="453.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="165.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="251.0" minWidth="10.0" prefWidth="212.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="145.0" minWidth="10.0" prefWidth="51.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="INFORMACION PRESTAMO" />
+                                    <Label text="Forma de Pago:" GridPane.rowIndex="1" />
+                                    <ComboBox fx:id="cboFormaPago" onAction="#restablecerTextField" prefHeight="25.0" prefWidth="252.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label text="Monto Solicitado: " GridPane.rowIndex="2" />
+                                    <TextField fx:id="txtMontoSolicitado" onAction="#restablecerTextField" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label text="Tasa Interes:" GridPane.rowIndex="3" />
+                                    <TextField fx:id="txtTasaInteres" onAction="#restablecerTextField" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label text="Cantidad Meses:" GridPane.rowIndex="4" />
+                                    <TextField fx:id="txtCantidadMeses" onMouseClicked="#restablecerTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <ImageView fx:id="ivErrorFormaPago" fitHeight="35.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <ImageView fx:id="ivErrorMontoSolicitado" fitHeight="37.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <ImageView fx:id="ivErrorTasaInteres" fitHeight="34.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <ImageView fx:id="ivErrorCantidadMeses" fitHeight="33.0" fitWidth="65.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                 </children>
+                              </GridPane>
+                              <TableView fx:id="tblDetallePrestamo" layoutX="1.0" layoutY="249.0" prefHeight="250.0" prefWidth="543.0">
+                                <columns>
+                                  <TableColumn fx:id="columnaFechaPago" prefWidth="86.0" text="FECHA PAGO" />
+                                  <TableColumn fx:id="columnaSaldoAnterior" prefWidth="114.0" text="SALDO ANTERIOR" />
+                                    <TableColumn fx:id="columnaCuota" minWidth="0.0" prefWidth="78.0" text="CUOTA" />
+                                    <TableColumn fx:id="columnaInteres" minWidth="0.0" prefWidth="64.0" text="INTERES" />
+                                    <TableColumn fx:id="columnaAmortizacion" minWidth="0.0" prefWidth="101.0" text="AMORTIZACION" />
+                                    <TableColumn fx:id="columnaSaldoActual" prefWidth="95.0" text="SALDO ACTUAL" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="btnCalcular" layoutX="14.0" layoutY="189.0" mnemonicParsing="false" onAction="#calcular" prefHeight="47.0" prefWidth="116.0" text="Calcular" />
+                              <Button layoutX="267.0" layoutY="516.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="116.0" text="Salir" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

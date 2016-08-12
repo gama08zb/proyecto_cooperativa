@@ -1,0 +1,15 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+ .button{
+    -fx-text-fill: WHITE;
+    -fx-background-color: #61466e;
+  
+    -fx-padding: 5;
+}
+.root{
+    -fx-font-size: 14pt;
+    -fx-font-family: "Tahoma";
+    -fx-base: #cb75e0;
+    -fx-background: WHITE;
+    -fx-focus-color: #B6A678;
+    -fx-background-image: url("Image/bg.jpg") center
+}

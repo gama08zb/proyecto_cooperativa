@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AgregarClienteController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="1000.0">
+         <top>
+            <AnchorPane prefHeight="28.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="1000.0">
+                    <menus>
+                      <Menu mnemonicParsing="false" text="Archivo">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#limpiarComponentes" text="Nuevo" />
+                              <MenuItem mnemonicParsing="false" text="Guardar" />
+                              <MenuItem mnemonicParsing="false" text="Salir" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Editar">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Buscar Cliente" />
+                              <MenuItem mnemonicParsing="false" text="Agregar Estado Civil" />
+                              <MenuItem mnemonicParsing="false" text="Agregar Pais" />
+                              <MenuItem mnemonicParsing="false" text="Agregar Departamento" />
+                              <MenuItem mnemonicParsing="false" text="Agregar Municipio" />
+                              <MenuItem mnemonicParsing="false" text="Agregar Empresa" />
+                              <MenuItem mnemonicParsing="false" text="Agregar Cargo" />
+                              <MenuItem mnemonicParsing="false" onAction="#limpiarComponentes" text="Limpiar Componentes" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Ayuda">
+                        <items>
+                          <MenuItem mnemonicParsing="false" text="Ayuda" />
+                        </items>
+                      </Menu>
+                    </menus>
+                  </MenuBar>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <SplitPane dividerPositions="0.48997995991983967" prefHeight="565.0" prefWidth="1000.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <GridPane layoutX="14.0" layoutY="14.0" prefHeight="546.0" prefWidth="450.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="173.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="265.0" minWidth="10.0" prefWidth="241.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="36.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="DATOS PERSONALES" />
+                                    <Label text="Nombres:" GridPane.rowIndex="2" />
+                                    <Label text="Apellidos:" GridPane.rowIndex="3" />
+                                    <Label text="Correo Electrónico:" GridPane.rowIndex="8" />
+                                    <Label text="Número de Identidad:" GridPane.rowIndex="1" />
+                                    <Label text="Número de Teléfono:" GridPane.rowIndex="4" />
+                                    <Label text="Número de Celular:" GridPane.rowIndex="5" />
+                                    <Label text="Género:" GridPane.rowIndex="6" />
+                                    <Label text="Fecha de Nacimiento:" GridPane.rowIndex="7" />
+                                    <Label text="Estado Civil:" GridPane.rowIndex="9" />
+                                    <TextField fx:id="txtNumeroIdentidad" onMouseClicked="#restablecerTextField" promptText="sin espacios ejemplo 0000190000000" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="txtNombres" onMouseClicked="#restablecerTextField" promptText="Primer y Segundo Nombre" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="txtApellidos" onMouseClicked="#restablecerTextField" promptText="Primer y Segundo Apellido" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField fx:id="txtNumeroTelefono" onMouseClicked="#restablecerTextField" promptText="sin espacios ejemplo 27640000" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField fx:id="txtNumeroCelular" onMouseClicked="#restablecerTextField" promptText="sin espacios ejemplo 50004000" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <DatePicker fx:id="dprFechaNacimiento" onMouseClicked="#restablecerTextField" promptText="dia/mes/año" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <TextField fx:id="txtCorreoElectronico" onMouseClicked="#restablecerTextField" promptText="ejemplo nombre_usuario@mail.com" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    <ComboBox fx:id="cboEstadoCivil" onMouseClicked="#restablecerTextField" prefHeight="25.0" prefWidth="246.0" promptText="Seleccionar un estado civil" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                    <GridPane GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <RadioButton fx:id="rbnMasculino" mnemonicParsing="false" onMouseClicked="#restablecerTextField" text="Masculino">
+                                             <toggleGroup>
+                                                <ToggleGroup fx:id="Genero" />
+                                             </toggleGroup>
+                                          </RadioButton>
+                                          <RadioButton fx:id="rbnFemenino" mnemonicParsing="false" onMouseClicked="#restablecerTextField" text="Femenino" toggleGroup="$Genero" GridPane.columnIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                    <ImageView fitHeight="28.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <ImageView fitHeight="28.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <ImageView fitHeight="28.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <ImageView fitHeight="28.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <ImageView fitHeight="28.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <ImageView fitHeight="28.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                    <ImageView fx:id="ivErrorFechaNacimiento" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                    <ImageView fitHeight="28.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                                    <Label text="DIRECCION" GridPane.rowIndex="10" />
+                                    <Label text="Departamento:" GridPane.rowIndex="11" />
+                                    <ComboBox fx:id="cboEstado" onMouseClicked="#restablecerTextField" prefHeight="25.0" prefWidth="278.0" promptText="Seleccionar un Departamento" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                    <Label text="Municipio:" GridPane.rowIndex="12" />
+                                    <ComboBox fx:id="cboMunicipio" onMouseClicked="#restablecerTextField" prefHeight="25.0" prefWidth="277.0" promptText="Seleccionar un Municipio" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                                    <Label text="Colonia" GridPane.rowIndex="13" />
+                                    <ComboBox fx:id="cboColonia" onMouseClicked="#restablecerTextField" prefHeight="25.0" prefWidth="287.0" promptText="Seleccionar una Colonia" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                                    <Label text="Direccion:" GridPane.rowIndex="14" />
+                                    <TextField fx:id="txtDireccion" onMouseClicked="#restablecerTextField" promptText="Ejemplo casa numero 00" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                                    <ImageView fx:id="ivErrorNumeroIdentidad" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <ImageView fx:id="ivErrorNombres" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <ImageView fx:id="ivErrorApellidos" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <ImageView fx:id="ivErrorNumeroTelefono" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <ImageView fx:id="ivErrorNumeroCelular" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <ImageView fx:id="ivErrorGenero" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                    <ImageView fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                    <ImageView fx:id="ivErrorCorreoElectonico" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                    <ImageView fx:id="ivErrorEstadoCivil" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                                    <ImageView fx:id="ivErrorDepartamento" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                                    <ImageView fx:id="ivErrorMunicipio" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                                    <ImageView fx:id="ivErrorColonia" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+                                    <ImageView fx:id="ivErrorDireccion" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <GridPane layoutX="26.0" layoutY="2.0" prefHeight="489.0" prefWidth="485.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.0" minWidth="10.0" prefWidth="158.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="278.0" minWidth="10.0" prefWidth="274.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="102.0" minWidth="10.0" prefWidth="53.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="DIRECCION EMPRESA" />
+                                    <Label text="Nombre Empresa:" GridPane.rowIndex="6" />
+                                    <Label text="Cargo:" GridPane.rowIndex="9" />
+                                    <Label text="Salario:" GridPane.rowIndex="11" />
+                                    <ComboBox fx:id="cboTipoTrabajo" onMouseClicked="#restablecerTextField" prefHeight="25.0" prefWidth="279.0" promptText="Seleccionar Tipo de Trabajo" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                    <ComboBox fx:id="cboCargo" onMouseClicked="#restablecerTextField" prefHeight="25.0" prefWidth="278.0" promptText="Seleccionar Cargo" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                                    <TextField fx:id="txtSalario" onMouseClicked="#restablecerTextField" promptText="Cantidad en numero ejemplo 8000 " GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                                    <ImageView fitHeight="28.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <ImageView fitHeight="28.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <ImageView fitHeight="28.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <ImageView fitHeight="28.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <ImageView fitHeight="28.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                    <ImageView fitHeight="28.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                    <ImageView fitHeight="28.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                                    <Label text="Profesión:" GridPane.rowIndex="10" />
+                                    <ComboBox fx:id="cboProfesion" onMouseClicked="#restablecerTextField" prefHeight="25.0" prefWidth="279.0" promptText="Seleccionar Profesion" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                                    <Label text="Tipo de Trabajo:" GridPane.rowIndex="8" />
+                                    <TextField fx:id="txtNombreEmpresa" onMouseClicked="#restablecerTextField" promptText="Nombre del cubiculo (Puesto)" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label text="Departamento:" GridPane.rowIndex="1" />
+                                    <Label text="Municipio:" GridPane.rowIndex="2" />
+                                    <Label text="Colonia:" GridPane.rowIndex="3" />
+                                    <Label text="Direccion:" GridPane.rowIndex="4" />
+                                    <Label text="DATOS EMPRESA" GridPane.rowIndex="5" />
+                                    <ComboBox fx:id="cboEstadoEmpresa" onMouseClicked="#restablecerTextField" prefHeight="25.0" prefWidth="283.0" promptText="Seleccionar un Departamento" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <ComboBox fx:id="cboMunicipioEmpresa" onMouseClicked="#restablecerTextField" prefHeight="25.0" prefWidth="277.0" promptText="Seleccionar un Municipio" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <ComboBox fx:id="cboColoniaEmpresa" onMouseClicked="#restablecerTextField" prefHeight="25.0" prefWidth="283.0" promptText="Seleccionar una Colonia" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField fx:id="txtDireccionEmpresa" onMouseClicked="#restablecerTextField" promptText="Ejemplo cubiculo (Puesto) numero 00" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label text="Telefono Empresa:" GridPane.rowIndex="7" />
+                                    <TextField fx:id="txtTelefonoEmpresa" onMouseClicked="#restablecerTextField" promptText="Sin espacios ejemplo 27640000 " GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <ImageView fx:id="ivErrorDepatamentoEmpresa" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <ImageView fx:id="ivErrorMunicipioEmpresa" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <ImageView fx:id="ivErrorColoniaEmpresa" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <ImageView fx:id="ivErrorDireccionEmpresa" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <ImageView fx:id="ivErrorNombreEmpresa" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                    <ImageView fx:id="ivErrorTelefonoEmpresa" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                                    <ImageView fx:id="ivErrorTipoTrabajo" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                                    <ImageView fx:id="ivErrorCargo" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                                    <ImageView fx:id="ivErrorProfesion" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                                    <ImageView fx:id="ivErrorSalario" fitHeight="34.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                                 </children>
+                              </GridPane>
+                              <Button fx:id="closeButton" layoutX="269.0" layoutY="521.0" mnemonicParsing="false" onAction="#cerrar" prefHeight="34.0" prefWidth="107.0" text="Cancelar" />
+                              <Button fx:id="btnAceptar" layoutX="123.0" layoutY="521.0" mnemonicParsing="false" onAction="#guardarCliente" prefHeight="34.0" prefWidth="107.0" text="Aceptar" />
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </center>
+         <bottom>
+            <AnchorPane prefHeight="33.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutY="11.0" text="Estado. Creando nuevo cliente" />
+               </children></AnchorPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
