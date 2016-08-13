@@ -673,7 +673,7 @@ public class Conexion {
 		}
 	}
 	
-	public String pagarPrestamo(String numeroPrestamo){
+	public String pagarPrestamo(String numeroPrestamo, PagoPrestamo pagoPrestamo){
 	       try {
 	    		Statement instruccion = conexion.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
 				ResultSet resultadoTipoPrestamo = instruccion.executeQuery(
@@ -682,9 +682,12 @@ public class Conexion {
 						+" WHERE ID_PRESTAMO =  "+ numeroPrestamo);
 				resultadoTipoPrestamo.next();
 				if (resultadoTipoPrestamo.getInt("ID_FORMA_PAGO")==1){
-		            CallableStatement proc = conexion.prepareCall(" CALL SP_PAGAR_PRESTAMO_DIARIO(?,?) ");
+		            CallableStatement proc = conexion.prepareCall(" CALL SP_PAGAR_PRESTAMO_DIARIO(?,?,?,?,?) ");
 		            proc.setString("P_ID_PRESTAMO",numeroPrestamo);
 		            proc.registerOutParameter("P_MENSAJE", Types.VARCHAR);
+		            proc.setDouble("P_CUOTA", pagoPrestamo.getCuota());
+		            proc.setDouble("P_PAGO_CAPITAL", pagoPrestamo.getPagoCapital());
+		            proc.setDouble("P_INTERES", pagoPrestamo.getInteres());
 		            proc.execute();            
 		            return proc.getString("P_MENSAJE");
 				}else if (resultadoTipoPrestamo.getInt("ID_FORMA_PAGO")==2){
@@ -893,18 +896,15 @@ public class Conexion {
 		try {
 			Statement instruccion = conexion.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
 			ResultSet resultado = instruccion.executeQuery(
-					
-				      
-				       
-				            
 					"SELECT A.SALDO_ACTUAL FROM TBL_DESCRIPCION_PRESTAMOS A  "
-					+ "WHERE A.FECHA_PAGO= ( SELECT MAX(FECHA_PAGO)  FROM TBL_DESCRIPCION_PRESTAMOS WHERE ID_PRESTAMO="+numeroPrestamo
-					+ " AND  ID_PRESTAMO="+ numeroPrestamo);
+					+ " WHERE A.FECHA_PAGO= ( SELECT MAX(FECHA_PAGO)  FROM TBL_DESCRIPCION_PRESTAMOS WHERE ID_PRESTAMO= "+numeroPrestamo+")"
+					+ " AND  ID_PRESTAMO= "+ numeroPrestamo);
 					
 			resultado.next();
 			return  resultado.getDouble("SALDO_ACTUAL");
 			
 		} catch (SQLException e) {
+			System.out.println(e.getMessage());
 			 return 0;
 		}
 	

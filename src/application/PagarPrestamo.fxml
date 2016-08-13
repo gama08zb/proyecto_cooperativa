@@ -33,7 +33,7 @@
          <center>
             <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <GridPane layoutX="38.0" layoutY="26.0" prefHeight="117.0" prefWidth="404.0">
+                  <GridPane layoutX="38.0" layoutY="26.0" prefHeight="122.0" prefWidth="404.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="114.0" />
                         <ColumnConstraints hgrow="SOMETIMES" maxWidth="247.0" minWidth="10.0" prefWidth="229.0" />
@@ -44,16 +44,19 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
                         <Label text="Numero de Prestamo:" />
                         <Label text="Nombre Cliente:" GridPane.rowIndex="1" />
                         <Label fx:id="lblNombreCliente" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <TextField fx:id="txtNumeroPrestamo" GridPane.columnIndex="1" />
-                        <Label text="Cuota a Pagar:" GridPane.rowIndex="3" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#buscarCliente" prefHeight="25.0" prefWidth="83.0" text="Buscar" GridPane.rowIndex="2" />
+                        <Label text="Cuota a Pagar:" GridPane.rowIndex="4" />
+                        <TextField fx:id="txtCuota" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Button fx:id="btnBuscar" mnemonicParsing="false" onAction="#buscarCliente" prefHeight="25.0" prefWidth="83.0" text="Buscar" GridPane.rowIndex="3" />
                         <ImageView fitHeight="31.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" />
+                        <Label text="Saldo:" GridPane.rowIndex="2" />
+                        <Label fx:id="lblSaldo" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
                   <TableView fx:id="tblDeposito" layoutX="18.0" layoutY="161.0" prefHeight="299.0" prefWidth="462.0">
@@ -64,7 +67,7 @@
                         <TableColumn fx:id="columnaSaldoActual" prefWidth="77.0" text="Saldo Actual" />
                     </columns>
                   </TableView>
-                  <Button fx:id="btnAceptar" layoutX="397.0" layoutY="113.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="27.0" prefWidth="88.0" text="Pagar Cuota" />
+                  <Button fx:id="btnAceptar" layoutX="402.0" layoutY="121.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="27.0" prefWidth="88.0" text="Pagar Cuota" />
                </children>
             </AnchorPane>
          </center>

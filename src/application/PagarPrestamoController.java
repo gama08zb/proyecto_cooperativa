@@ -49,7 +49,7 @@ public class PagarPrestamoController implements Initializable {
 	private Button btnAceptar;
 	private Conexion conexion;
 	private ObservableList<DetallePrestamo> listaDetallePrestamo;
-
+	private PagoPrestamo pagoPrestamo;
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		lblNombreCliente.setText("");
@@ -65,7 +65,7 @@ public class PagarPrestamoController implements Initializable {
 	public void buscarCliente() {
 		listaDetallePrestamo.clear();
 		conexion = new Conexion();
-		PagoPrestamo pagoPrestamo= conexion.buscarPrestamo(txtNumeroPrestamo.getText());
+		pagoPrestamo= conexion.buscarPrestamo(txtNumeroPrestamo.getText());
 		lblNombreCliente.setText(pagoPrestamo.getNombreCliente());
 		if (lblNombreCliente.getText() != "") {
 			conexion.llenarListaPrestamos(txtNumeroPrestamo.getText(), listaDetallePrestamo);
@@ -100,7 +100,7 @@ public class PagarPrestamoController implements Initializable {
 	@FXML
 	public void aceptar() {
 		conexion = new Conexion();
-		String mensaje = conexion.pagarPrestamo(txtNumeroPrestamo.getText());
+		String mensaje = conexion.pagarPrestamo(txtNumeroPrestamo.getText(), pagoPrestamo);
 		if (mensaje.length() >= 42) {
 			if (mensaje.substring(0, 49).equals("ERROR 01: EL CLIENTE ESTA ATRASADO EN SU PAGO CON")) {
 				Alert cuadroDialogo = new Alert(AlertType.CONFIRMATION);

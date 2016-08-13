@@ -25,8 +25,6 @@ public class PagoPrestamo {
 		this.plazoMeses = new  SimpleIntegerProperty(plazoMeses);
 		this.montoSolicitado= new  SimpleDoubleProperty(montoSolicitado);
 	}
-	
-	
 	public IntegerProperty codigoFormaPagoProperty() {
 		return codigoFormaPago;
 	}
