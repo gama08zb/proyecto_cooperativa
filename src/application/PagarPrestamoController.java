@@ -21,11 +21,14 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import model.Conexion;
 
 import model.DetallePrestamo;
+import model.PagoPrestamo;
 
 public class PagarPrestamoController implements Initializable {
 	private Main main;
 	@FXML
 	private TextField txtNumeroPrestamo;
+	@FXML
+	private TextField txtCuota;
 	@FXML
 	private Label lblNombreCliente;
 	@FXML
@@ -42,7 +45,7 @@ public class PagarPrestamoController implements Initializable {
 	private Button btnBuscar;
 	@FXML
 	private Button btnAceptar;
-	Conexion conexion;
+	private Conexion conexion;
 	private ObservableList<DetallePrestamo> listaDetallePrestamo;
 
 	@Override
@@ -60,7 +63,9 @@ public class PagarPrestamoController implements Initializable {
 	public void buscarCliente() {
 		listaDetallePrestamo.clear();
 		conexion = new Conexion();
-		lblNombreCliente.setText(conexion.buscarPrestamo(txtNumeroPrestamo.getText()));
+		PagoPrestamo pagoPrestamo= conexion.buscarPrestamo(txtNumeroPrestamo.getText());
+		lblNombreCliente.setText(pagoPrestamo.getNombreCliente());
+		txtCuota.setText(""+pagoPrestamo.getCuota());
 		if (lblNombreCliente.getText() != "") {
 			conexion.llenarListaPrestamos(txtNumeroPrestamo.getText(), listaDetallePrestamo);
 			tblDeposito.setItems(listaDetallePrestamo);
@@ -86,9 +91,9 @@ public class PagarPrestamoController implements Initializable {
 		conexion = new Conexion();
 		String mensaje = conexion.pagarPrestamo(txtNumeroPrestamo.getText());
 		if (mensaje.length() >= 42) {
-			if (mensaje.substring(0, 42).equals("ERROR: EL CLIENTE ESTA ATRASADO EN SU PAGO")) {
+			if (mensaje.substring(0, 49).equals("ERROR 01: EL CLIENTE ESTA ATRASADO EN SU PAGO CON")) {
 				Alert cuadroDialogo = new Alert(AlertType.CONFIRMATION);
-				cuadroDialogo.setContentText(mensaje + "." + " ¿desea pagar su deuda?");
+				cuadroDialogo.setContentText(mensaje + "." + " ¿desea pagar toda su deuda?");
 				cuadroDialogo.setTitle("Error");
 				cuadroDialogo.setHeaderText("Error ");
 				cuadroDialogo.showAndWait();
@@ -97,11 +102,12 @@ public class PagarPrestamoController implements Initializable {
 					mensaje = conexion.pagarPrestamoAtrasado(txtNumeroPrestamo.getText());
 				}
 			} else {
+				if (mensaje.substring(0,1).equals("1")){}
 				conexion = new Conexion();
 				listaDetallePrestamo.clear();
 				conexion.llenarListaPrestamos(txtNumeroPrestamo.getText(), listaDetallePrestamo);
 				Alert cuadroDialogo = new Alert(AlertType.INFORMATION);
-				cuadroDialogo.setContentText(mensaje + ".");
+				cuadroDialogo.setContentText(mensaje.substring(1) + ".");
 				cuadroDialogo.setTitle("INFORMACION");
 				cuadroDialogo.setHeaderText("INFORMACION ");
 				cuadroDialogo.showAndWait();
@@ -113,7 +119,7 @@ public class PagarPrestamoController implements Initializable {
 			cuadroDialogo.setHeaderText("INFORMACION ");
 			cuadroDialogo.showAndWait();
 		}
-
+		buscarCliente();
 		conexion.cerrarConexion();
 	}
 }

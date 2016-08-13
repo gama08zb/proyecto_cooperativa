@@ -189,7 +189,7 @@ public class Main extends Application {
 				loader.setLocation(getClass().getResource("AprobarPrestamo.fxml"));
 				AnchorPane root = (AnchorPane) loader.load();
 				Scene scene = new Scene(root);
-				scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+				scene.getStylesheets().add(getClass().getResource("stylePrestamos.css").toExternalForm());
 				aprobarPrestamoController = loader.getController();
 				aprobarPrestamoController.setMain(this);
 				frmAgregarPrestamo.setScene(scene);

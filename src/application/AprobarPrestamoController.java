@@ -120,7 +120,7 @@ public class AprobarPrestamoController implements Initializable {
 				cuadroDialogo.setTitle("Resultado");
 				cuadroDialogo.setHeaderText("Resultado:");
 				cuadroDialogo.showAndWait();
-				Map<String, Object> parametros = new HashMap();
+				Map<String, Object> parametros = new HashMap<String, Object>();
 				parametros.put("prtIdSolicitud", txtNumeroSolicitud.getText());
 				JasperReportX.crearReport(conexion.getConexion(), "C:\\Users\\Zelaya\\JaspersoftWorkspace\\PrimerProyecto\\NuevaSolicitud.jasper",parametros);
 				JasperReportX.showViewer();

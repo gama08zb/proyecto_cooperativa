@@ -620,11 +620,11 @@ public class Conexion {
 	       }  
 	}
 	
-	public String buscarPrestamo(String numeroPrestamo){
+	public PagoPrestamo buscarPrestamo(String numeroPrestamo){
 		try {
 			Statement instruccion = conexion.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
 			ResultSet resultado = instruccion.executeQuery(
-					"SELECT B.NOMBRES||' '||B.APELLIDOS AS NOMBRE_COMPLETO, D.CUOTA "
+					"SELECT B.NOMBRES||' '||B.APELLIDOS AS NOMBRE_COMPLETO, D.CUOTA , D.ID_FORMA_PAGO "
 					+ "FROM TBL_CLIENTES_X_SOLICITUDES A "
 					+ "INNER JOIN TBL_CLIENTES B "
 					+ "ON (A.ID_CLIENTE=B.ID_CLIENTE) "
@@ -635,17 +635,18 @@ public class Conexion {
 					+"WHERE C.ID_PRESTAMO =  "+ numeroPrestamo);
 					
 			resultado.next();
-			return resultado.getString("NOMBRE_COMPLETO")+ "\n"+ resultado.getDouble("CUOTA");
+			PagoPrestamo pagoPrestamo= new PagoPrestamo(resultado.getString("NOMBRE_COMPLETO"), resultado.getDouble("CUOTA"), resultado.getInt("ID_FORMA_PAGO"));
+			return pagoPrestamo ;
 			
 		} catch (SQLException e) {
-			 return "";
+			 return null;
 		}
 	
 	 }
 	
 	public void llenarListaPrestamos (String numeroPrestamo , ObservableList<DetallePrestamo> lista){
 		try {
-			Statement instruccion = conexion.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+			Statement instruccion = conexion.createStatement();
 			ResultSet resultado = instruccion.executeQuery(
 					"SELECT FECHA_PAGO, PAGO, SALDO_ACTUAL "
 					+ "FROM TBL_DESCRIPCION_PRESTAMOS "
