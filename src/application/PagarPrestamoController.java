@@ -32,6 +32,8 @@ public class PagarPrestamoController implements Initializable {
 	@FXML
 	private Label lblNombreCliente;
 	@FXML
+	private Label lblSaldo;
+	@FXML
 	private TableView<DetallePrestamo> tblDeposito;
 	@FXML
 	private TableColumn<DetallePrestamo, Date> columnaFechaPago;
@@ -65,11 +67,20 @@ public class PagarPrestamoController implements Initializable {
 		conexion = new Conexion();
 		PagoPrestamo pagoPrestamo= conexion.buscarPrestamo(txtNumeroPrestamo.getText());
 		lblNombreCliente.setText(pagoPrestamo.getNombreCliente());
-		txtCuota.setText(""+pagoPrestamo.getCuota());
 		if (lblNombreCliente.getText() != "") {
 			conexion.llenarListaPrestamos(txtNumeroPrestamo.getText(), listaDetallePrestamo);
 			tblDeposito.setItems(listaDetallePrestamo);
 			btnAceptar.setDisable(false);
+			pagoPrestamo.setSaldo(conexion.saldoPrestamo(txtNumeroPrestamo.getText()));
+			lblSaldo.setText(""+pagoPrestamo.getSaldo());
+			if  (pagoPrestamo.getCodigoFormaPago()==1){
+				double interes = (pagoPrestamo.getMontoSolicitado()*(pagoPrestamo.getTasaInteres()) / 100)/23;
+				double pagoCapital= pagoPrestamo.getMontoSolicitado()/23;
+				pagoPrestamo.setCuota(interes+pagoCapital);
+				pagoPrestamo.setInteres(interes);
+				pagoPrestamo.setPagoCapital(pagoCapital);
+				txtCuota.setText(""+pagoPrestamo.getCuota());
+			}
 
 		} else {
 			lblNombreCliente.setText("EL CLIENTE NO EXISTE");

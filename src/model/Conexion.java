@@ -624,18 +624,24 @@ public class Conexion {
 		try {
 			Statement instruccion = conexion.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
 			ResultSet resultado = instruccion.executeQuery(
-					"SELECT B.NOMBRES||' '||B.APELLIDOS AS NOMBRE_COMPLETO, D.CUOTA , D.ID_FORMA_PAGO "
+					"SELECT B.NOMBRES||' '||B.APELLIDOS AS NOMBRE_COMPLETO, D.ID_FORMA_PAGO, D.TASA_INTERES, D.PLAZO_MESES, DJ.MONTO_APROBADO "
 					+ "FROM TBL_CLIENTES_X_SOLICITUDES A "
 					+ "INNER JOIN TBL_CLIENTES B "
 					+ "ON (A.ID_CLIENTE=B.ID_CLIENTE) "
 					+ "INNER JOIN TBL_SOLICITUDES C "
 					+ "ON(C.ID_SOLICITUD=A.ID_SOLICITUD) "
+					+ "INNER JOIN TBL_DECISIONES_JUNTA DJ "
+					+ "ON(DJ.ID_DECISION_JUNTA=C.ID_DECISION_JUNTA) "
 					+ "INNER JOIN TBL_PRESTAMOS D "
 					+ "ON(D.ID_PRESTAMO=C.ID_PRESTAMO) "
 					+"WHERE C.ID_PRESTAMO =  "+ numeroPrestamo);
 					
 			resultado.next();
-			PagoPrestamo pagoPrestamo= new PagoPrestamo(resultado.getString("NOMBRE_COMPLETO"), resultado.getDouble("CUOTA"), resultado.getInt("ID_FORMA_PAGO"));
+			PagoPrestamo pagoPrestamo= new PagoPrestamo(resultado.getString("NOMBRE_COMPLETO"), 
+					resultado.getInt("ID_FORMA_PAGO"),
+					resultado.getDouble("TASA_INTERES"),
+					resultado.getInt("PLAZO_MESES"),
+					resultado.getDouble("MONTO_APROBADO"));
 			return pagoPrestamo ;
 			
 		} catch (SQLException e) {
@@ -882,4 +888,26 @@ public class Conexion {
 	       }
 	       
 	}
+	
+	public double saldoPrestamo(String numeroPrestamo){
+		try {
+			Statement instruccion = conexion.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+			ResultSet resultado = instruccion.executeQuery(
+					
+				      
+				       
+				            
+					"SELECT A.SALDO_ACTUAL FROM TBL_DESCRIPCION_PRESTAMOS A  "
+					+ "WHERE A.FECHA_PAGO= ( SELECT MAX(FECHA_PAGO)  FROM TBL_DESCRIPCION_PRESTAMOS WHERE ID_PRESTAMO="+numeroPrestamo
+					+ " AND  ID_PRESTAMO="+ numeroPrestamo);
+					
+			resultado.next();
+			return  resultado.getDouble("SALDO_ACTUAL");
+			
+		} catch (SQLException e) {
+			 return 0;
+		}
+	
+	 }
+	
 }
