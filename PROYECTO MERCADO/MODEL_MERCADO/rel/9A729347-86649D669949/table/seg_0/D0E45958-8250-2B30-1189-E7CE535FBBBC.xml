@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D0E45958-8250-2B30-1189-E7CE535FBBBC" name="TBL_FORMAS_PAGO">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:26:49 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_FORMA_PAGO" id="B9D95EAB-E8B8-3423-794E-D8EF37A3D04D">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:28:05 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FORMA_PAGO" id="4F66998C-2AFB-2FD1-C067-5174027924CF">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:28:05 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3EDD1A29-BD9D-A749-15AD-FBB3BB2FA622" name="TBL_FORMAS_PAGO_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:28:05 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B9D95EAB-E8B8-3423-794E-D8EF37A3D04D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

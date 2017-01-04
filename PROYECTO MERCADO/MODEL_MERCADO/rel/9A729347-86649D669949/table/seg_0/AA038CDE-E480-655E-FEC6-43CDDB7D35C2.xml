@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AA038CDE-E480-655E-FEC6-43CDDB7D35C2" name="TBL_ESTADOS">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:29:08 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_ESTADO" id="31BD754B-8377-0604-5546-AF20D7E7BFF2">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:30:55 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_ESTADO" id="7595BB32-290F-7BC8-6613-074FDC5F7A5B">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:30:55 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_PAIS" id="4B759D3B-7251-B555-739F-4252E86D2C04">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:31:43 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5FF2C792-61B0-AF75-8089-56219427BACA" referredColumn="0BE84BFB-D027-7019-1DA2-4CC73744CEFF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="19F11BF4-155F-DD6D-0513-9D8A7E163C1D" name="TBL_ESTADOS_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:30:55 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="31BD754B-8377-0604-5546-AF20D7E7BFF2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CE93EFC7-AF7A-50F2-A81E-FCE88EC5A5C5" name="TBL_ESTADOS_TBL_PAISES_FK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:51:59 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4B759D3B-7251-B555-739F-4252E86D2C04"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

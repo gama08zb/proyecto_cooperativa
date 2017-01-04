@@ -67,7 +67,7 @@
                         <TableColumn fx:id="columnaSaldoActual" prefWidth="77.0" text="Saldo Actual" />
                     </columns>
                   </TableView>
-                  <Button fx:id="btnAceptar" layoutX="397.0" layoutY="113.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="27.0" prefWidth="88.0" text="Pagar Cuota" />
+                  <Button fx:id="btnAceptar" layoutX="402.0" layoutY="121.0" mnemonicParsing="false" onAction="#aceptar" prefHeight="27.0" prefWidth="88.0" text="Pagar Cuota" />
                </children>
             </AnchorPane>
          </center>

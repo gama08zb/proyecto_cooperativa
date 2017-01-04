@@ -80,6 +80,15 @@ public class PagarPrestamoController implements Initializable {
 				pagoPrestamo.setInteres(interes);
 				pagoPrestamo.setPagoCapital(pagoCapital);
 				txtCuota.setText(""+pagoPrestamo.getCuota());
+				txtCuota.setDisable(false);
+			}else if  (pagoPrestamo.getCodigoFormaPago()==2){
+				double interes = (pagoPrestamo.getMontoSolicitado()*(pagoPrestamo.getTasaInteres()) / 100)*pagoPrestamo.getPlazoMeses()/pagoPrestamo.getPlazoMeses();
+				double pagoCapital= pagoPrestamo.getMontoSolicitado()/pagoPrestamo.getPlazoMeses();
+				pagoPrestamo.setCuota(interes+pagoCapital);
+				pagoPrestamo.setInteres(interes);
+				pagoPrestamo.setPagoCapital(pagoCapital);
+				txtCuota.setText(""+pagoPrestamo.getCuota());
+				txtCuota.setDisable(true);
 			}
 
 		} else {
@@ -100,35 +109,70 @@ public class PagarPrestamoController implements Initializable {
 	@FXML
 	public void aceptar() {
 		conexion = new Conexion();
-		String mensaje = conexion.pagarPrestamo(txtNumeroPrestamo.getText(), pagoPrestamo);
-		if (mensaje.length() >= 42) {
-			if (mensaje.substring(0, 49).equals("ERROR 01: EL CLIENTE ESTA ATRASADO EN SU PAGO CON")) {
-				Alert cuadroDialogo = new Alert(AlertType.CONFIRMATION);
-				cuadroDialogo.setContentText(mensaje + "." + " ¿desea pagar toda su deuda?");
-				cuadroDialogo.setTitle("Error");
-				cuadroDialogo.setHeaderText("Error ");
-				cuadroDialogo.showAndWait();
-				Optional<ButtonType> result = cuadroDialogo.showAndWait();
-				if (result.get() == ButtonType.OK) {
-					mensaje = conexion.pagarPrestamoAtrasado(txtNumeroPrestamo.getText());
+		pagoPrestamo.setCuota(Double.valueOf( txtCuota.getText()));
+		if (pagoPrestamo.getCodigoFormaPago()==1){
+			String mensaje = conexion.pagarPrestamo(txtNumeroPrestamo.getText(), pagoPrestamo);
+			if (mensaje.length() >= 42) {
+				if (mensaje.substring(0, 49).equals("ERROR 01: EL CLIENTE ESTA ATRASADO EN SU PAGO CON")) {
+					Alert cuadroDialogo = new Alert(AlertType.CONFIRMATION);
+					cuadroDialogo.setContentText(mensaje + ".");
+					cuadroDialogo.setTitle("Error");
+					cuadroDialogo.setHeaderText("Error ");
+					cuadroDialogo.showAndWait();
+				} else {
+					if (mensaje.substring(0,1).equals("1")){}
+					conexion = new Conexion();
+					listaDetallePrestamo.clear();
+					conexion.llenarListaPrestamos(txtNumeroPrestamo.getText(), listaDetallePrestamo);
+					Alert cuadroDialogo = new Alert(AlertType.INFORMATION);
+					cuadroDialogo.setContentText(mensaje.substring(1) + ".");
+					cuadroDialogo.setTitle("INFORMACION");
+					cuadroDialogo.setHeaderText("INFORMACION ");
+					cuadroDialogo.showAndWait();
 				}
 			} else {
-				if (mensaje.substring(0,1).equals("1")){}
-				conexion = new Conexion();
-				listaDetallePrestamo.clear();
-				conexion.llenarListaPrestamos(txtNumeroPrestamo.getText(), listaDetallePrestamo);
 				Alert cuadroDialogo = new Alert(AlertType.INFORMATION);
-				cuadroDialogo.setContentText(mensaje.substring(1) + ".");
+				cuadroDialogo.setContentText(mensaje + ".");
 				cuadroDialogo.setTitle("INFORMACION");
 				cuadroDialogo.setHeaderText("INFORMACION ");
 				cuadroDialogo.showAndWait();
 			}
-		} else {
-			Alert cuadroDialogo = new Alert(AlertType.INFORMATION);
-			cuadroDialogo.setContentText(mensaje + ".");
-			cuadroDialogo.setTitle("INFORMACION");
-			cuadroDialogo.setHeaderText("INFORMACION ");
-			cuadroDialogo.showAndWait();
+		}else if (pagoPrestamo.getCodigoFormaPago()==2){
+			String mensaje = conexion.pagarPrestamo(txtNumeroPrestamo.getText(), pagoPrestamo);
+			if (mensaje.length() >= 42) {
+				if (mensaje.substring(0, 49).equals("ERROR 02: EL CLIENTE ESTA ATRASADO EN SU PAGO CON")) {
+					Alert cuadroDialogo = new Alert(AlertType.CONFIRMATION);
+					cuadroDialogo.setContentText(mensaje + "." + " ¿desea continuar?");
+					cuadroDialogo.setTitle("Error");
+					cuadroDialogo.setHeaderText("Error ");
+					Optional<ButtonType> result = cuadroDialogo.showAndWait();
+					if (result.get() == ButtonType.OK){
+					    mensaje= conexion.pagarPrestamoAtrasado(txtNumeroPrestamo.getText(), pagoPrestamo);
+					    cuadroDialogo = new Alert(AlertType.INFORMATION);
+						cuadroDialogo.setContentText(mensaje.substring(1) + ".");
+						cuadroDialogo.setTitle("INFORMACION");
+						cuadroDialogo.setHeaderText("INFORMACION ");
+						cuadroDialogo.showAndWait();
+					}
+					
+				} else {
+					if (mensaje.substring(0,1).equals("1")){}
+					conexion = new Conexion();
+					listaDetallePrestamo.clear();
+					conexion.llenarListaPrestamos(txtNumeroPrestamo.getText(), listaDetallePrestamo);
+					Alert cuadroDialogo = new Alert(AlertType.INFORMATION);
+					cuadroDialogo.setContentText(mensaje.substring(1) + ".");
+					cuadroDialogo.setTitle("INFORMACION");
+					cuadroDialogo.setHeaderText("INFORMACION ");
+					cuadroDialogo.showAndWait();
+				}
+			} else {
+				Alert cuadroDialogo = new Alert(AlertType.INFORMATION);
+				cuadroDialogo.setContentText(mensaje + ".");
+				cuadroDialogo.setTitle("INFORMACION");
+				cuadroDialogo.setHeaderText("INFORMACION ");
+				cuadroDialogo.showAndWait();
+			}
 		}
 		buscarCliente();
 		conexion.cerrarConexion();

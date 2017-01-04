@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B5C54B93-679D-D6E9-F0F6-67F554207779" name="TBL_CLIENTES_X_SOLICITUDES">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 20:12:15 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CLIENTE" id="AADDF4D7-76A3-832D-4894-DD9E98C0E72F">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 20:13:26 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2DFBF57F-3AE5-491A-A2E3-4FBA470213C0" referredColumn="1396990F-ABBA-8413-3245-B388058F352B"/>
+</associations>
+</Column>
+<Column name="ID_SOLICITUD" id="C3978495-C273-FBEC-0338-D8E6F965D291">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 20:13:26 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A3FCD74C-BB19-430D-80E7-966BC4C1282D" referredColumn="46AA1A72-C657-88D3-F856-F5EB2A68ABDF"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7BF7839D-3BB2-B8A6-5C1E-A7C8EF897940" name="TBL_CLIENTES_X_SOLICITUDES_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 20:13:26 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AADDF4D7-76A3-832D-4894-DD9E98C0E72F"/>
+<colUsage columnID="C3978495-C273-FBEC-0338-D8E6F965D291"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9177B32A-A206-CC17-6B0D-7CD44B796F00" name="TBL_CLIE_X_SOLI_TBL_CLI_FK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 20:14:05 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AADDF4D7-76A3-832D-4894-DD9E98C0E72F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B165D261-AC77-ED7E-07A1-62F109CED77B" name="TBL_CLIE_X_SOLI_TBL_SOLI_FK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 20:14:12 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3978495-C273-FBEC-0338-D8E6F965D291"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

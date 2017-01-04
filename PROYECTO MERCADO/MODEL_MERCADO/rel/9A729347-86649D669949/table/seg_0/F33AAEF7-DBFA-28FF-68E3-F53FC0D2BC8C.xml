@@ -1,0 +1,159 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F33AAEF7-DBFA-28FF-68E3-F53FC0D2BC8C" name="TBL_DECISIONES_JUNTA">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:43:36 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_DECISION_JUNTA" id="521DC939-6B6F-310F-E816-0B81098C7107">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:48:50 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_FORMA_PAGO" id="886233C5-41CE-D826-55C3-9A732406955E">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:48:50 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="41AF498A-0573-06EB-D560-3FBDBFB28847" referredColumn="B9D95EAB-E8B8-3423-794E-D8EF37A3D04D"/>
+</associations>
+</Column>
+<Column name="MONTO_APROBADO" id="6D58BD19-C68D-127C-130F-4657394FBCDC">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:48:50 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TASA_INTERES" id="6077811B-25A6-A779-8A4C-86EDCB7F05CE">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:48:50 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PLAZO_MESES" id="D8102A19-7B17-DDD7-24AC-77607D1165F7">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:48:50 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CUOTA" id="FB694261-F33F-098E-C432-5D4A0DF10F76">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 20:54:44 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="REVISADO_POR_NOMBRE" id="8EF9BDDD-2F85-7AEB-58FE-DBB5E1156B9F">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:48:50 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VISTO_BUENO_NOMBRE" id="54914E17-06BB-2C1E-F822-5FFA5BCD29B4">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:48:50 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_PRESIDENTE" id="2E1F9EEC-FB14-7B6B-0832-36302C5626D7">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:48:50 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ESTADO_DECISION" id="88296431-504D-FA0C-E685-F756F02E6CCD">
+<createdBy>Gama</createdBy>
+<createdTime>2016-02-27 03:21:48 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CA8330D1-ACED-155F-7F4E-4E6DB714F070" referredColumn="10D16599-0027-15CF-FF8D-8B2CE372519C"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="222C82E4-CE17-F6EB-80B4-0F40D9753DEE" name="TBL_DECISIONES_JUNTA_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:48:50 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="521DC939-6B6F-310F-E816-0B81098C7107"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="02DE4EC8-8A20-A408-AE68-60C90F48D8BE" name="TBL_DECI_J_TBL_FOR_P_FK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 19:03:26 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="886233C5-41CE-D826-55C3-9A732406955E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="4E10952A-161B-AC84-609C-AF7D74212684" name="TBL_DECI_J_TBL_ES_DECI_FK">
+<createdBy>Gama</createdBy>
+<createdTime>2016-02-27 03:21:48 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88296431-504D-FA0C-E685-F756F02E6CCD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

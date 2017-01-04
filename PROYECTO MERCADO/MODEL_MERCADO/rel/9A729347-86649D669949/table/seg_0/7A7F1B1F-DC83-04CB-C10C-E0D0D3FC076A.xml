@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7A7F1B1F-DC83-04CB-C10C-E0D0D3FC076A" name="TBL_INFORMACION_PRESTAMOS">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:20:42 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_INFORMACION_PRESTAMO" id="5906CF44-56FB-9AD5-9629-54E7931FEA67">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:26:34 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MONTO_SOLICITADO" id="CBE87856-4CDC-930E-F42F-3B73968C3B88">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:26:34 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_FORMA_PAGO" id="B70C7180-A278-52A9-066B-BB62B0625FE7">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:26:34 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="75B8A89E-8417-B3F9-C166-C0EF6CEA3154" referredColumn="B9D95EAB-E8B8-3423-794E-D8EF37A3D04D"/>
+</associations>
+</Column>
+<Column name="PLAZO_MESES" id="08A7A8AE-0752-46F8-2399-D9AB0DD93012">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:26:34 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CUOTAS" id="9BC1F222-23E6-8905-8091-B1F3BC94C65B">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:26:34 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0AC6657F-68B7-16A4-AC13-29CE2393CB04" name="TBL_INFORMACION_PRESTAMOS_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:26:34 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5906CF44-56FB-9AD5-9629-54E7931FEA67"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E79C4E87-0897-4AA8-F399-E9A4E3FFB226" name="TBL_INFO_PRES_TBL_FOR_P_FK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 19:02:56 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B70C7180-A278-52A9-066B-BB62B0625FE7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

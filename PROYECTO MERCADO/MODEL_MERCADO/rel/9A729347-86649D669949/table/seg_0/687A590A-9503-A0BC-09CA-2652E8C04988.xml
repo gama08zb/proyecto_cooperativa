@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="687A590A-9503-A0BC-09CA-2652E8C04988" name="TBL_COLONIAS">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-07 17:34:35 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_COLONIA" id="4F149F2F-C42D-028D-BA01-7C48AB35BE03">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-07 17:36:25 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_COLONIA" id="CBC39E71-2F23-5F7A-1892-568AB9800593">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-07 17:36:25 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_MUNICIPIO" id="1CA5EE7F-C175-188D-BC5A-3206534602AF">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-07 17:36:25 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="82E98EBF-4D3B-5987-B2D5-DB421D0517CB" referredColumn="D1E2816F-4351-703C-D46C-E56687223B86"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="C7B1565B-58A7-09E0-C7EB-4420A4D9EE56" name="TBL_COLONIAS_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-07 17:36:25 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4F149F2F-C42D-028D-BA01-7C48AB35BE03"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="41BA2C07-B051-767C-77F2-4A04708C7107" name="TBL_COLONIAS_TBL_MUNI_FK">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-07 17:36:34 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1CA5EE7F-C175-188D-BC5A-3206534602AF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

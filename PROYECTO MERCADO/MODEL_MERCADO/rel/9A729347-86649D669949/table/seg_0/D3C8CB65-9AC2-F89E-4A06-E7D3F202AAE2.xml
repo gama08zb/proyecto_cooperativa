@@ -1,0 +1,283 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D3C8CB65-9AC2-F89E-4A06-E7D3F202AAE2" name="TBL_CLIENTES">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:00:48 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CLIENTE" id="1396990F-ABBA-8413-3245-B388058F352B">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:10:03 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ESTADO_CIVIL" id="AA37F6DD-9CAB-2D62-E4B4-6F3CADBAB84E">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:10:03 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="896FC945-A439-D928-F672-7B52F83EBAC6" referredColumn="E1098F34-81C2-4F31-2D22-3E1305CB31CA"/>
+</associations>
+</Column>
+<Column name="ID_PROFESION" id="BACA7030-381A-1FEF-D321-162EF41732A8">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:10:03 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="96A0C8F7-D801-7C38-F2DA-AB2411E223C3" referredColumn="426370A4-049A-C527-C6CF-BFFE4E5AF955"/>
+</associations>
+</Column>
+<Column name="ID_DIRECCION" id="36AC0345-3914-9E93-B74A-170889C6C306">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:10:03 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E16203D5-B922-CA77-078A-FE189EC1EE26" referredColumn="BBB43005-FFF5-E3DB-97E0-DB7AA4254016"/>
+</associations>
+</Column>
+<Column name="ID_EMPRESA" id="41C14E0E-C0F8-AB1A-514D-BAB0EAC78CE9">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:17:10 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="00569102-FB5F-99C4-E4D6-4B573DCE9A32" referredColumn="6EE75637-F0F1-5731-625D-ED1F32868828"/>
+</associations>
+</Column>
+<Column name="ID_CARGO" id="A7455A2C-DEC8-4FC1-3C67-F246024C05D9">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:17:10 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D5EC1564-A711-34EC-DCE4-CC44E20EBE10" referredColumn="63080734-C56A-0984-9E7A-106FFDC3C4AC"/>
+</associations>
+</Column>
+<Column name="NUMERO_IDENTIDAD" id="3AB0DFCD-D2E9-4498-445C-51898A17403E">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-03 21:09:03 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<ownDataTypeParameters>13,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRES" id="B94D73F2-48EA-5128-E5FA-7541255B1E79">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:10:03 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="APELLIDOS" id="CD9A23D8-CDB8-F856-0744-C970E33B79CD">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:10:03 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>250</dataTypeSize>
+<ownDataTypeParameters>250,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TELEFONO" id="2582D8C6-EA2A-CCDF-3D19-E771D8BDBCE8">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:10:03 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CELULAR" id="0AD0981C-EE92-0B68-FBCD-72E006A054BB">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:10:03 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SALARIO" id="30E19EC9-259B-B9EE-48F9-FE1520E69F96">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:43:44 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CORREO_ELECTRONICO" id="53FCC652-2420-13DC-A77E-FFDD46B48584">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-05 02:31:27 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="GENERO" id="2F633ABC-82A1-4F22-B689-FF1719E29AD5">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-05 02:31:27 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_NACIMIENTO" id="46117906-666A-8A60-2DC0-D9CC5E90BB3E">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-05 02:52:14 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_INGRESO" id="FF386E17-A07F-3297-398D-6ECFDE906E2C">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-11 00:39:53 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTADO_CLIENTE" id="F15BDC16-C0AB-06D4-B323-139C6BA32836">
+<createdBy>Zelaya</createdBy>
+<createdTime>2016-06-15 16:00:16 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="EE68EE86-6258-4B00-44C7-239BC095DC01" name="TBL_CLIENTE_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:10:03 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1396990F-ABBA-8413-3245-B388058F352B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="084E54BD-837B-1EC9-A53D-E03E2C1C5B97" name="TBL_CLIENTES__UN">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-03 21:12:00 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3AB0DFCD-D2E9-4498-445C-51898A17403E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C7107E64-E6DF-DD6E-8266-20DC63D7C58E" name="TBL_CLIE_TBL_DIRE_FK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:54:22 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="36AC0345-3914-9E93-B74A-170889C6C306"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DA6FAD68-1445-1323-C566-94DB116CD73A" name="TBL_CLI_TBL_ES_CIVIL_FK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:55:13 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA37F6DD-9CAB-2D62-E4B4-6F3CADBAB84E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="130295BB-474C-5FA0-B1C4-3571D0F7CDE7" name="TBL_CLI_TBL_PROFE_FK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:55:46 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BACA7030-381A-1FEF-D321-162EF41732A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="39FDB865-6CB9-A909-8BBE-AFAB3B7CDE09" name="TBL_CLIENTES_TBL_EMPRESAS_FK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:56:39 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="41C14E0E-C0F8-AB1A-514D-BAB0EAC78CE9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B92C6A32-5D14-B4A3-F92D-E9B6FFEFBFC7" name="TBL_CLIE_TBL_CARGOS_FK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:56:48 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A7455A2C-DEC8-4FC1-3C67-F246024C05D9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

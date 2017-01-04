@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2591CCA5-2EE8-5613-6993-D29027D62BC2" name="TBL_CARGOS">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:41:24 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CARGO" id="63080734-C56A-0984-9E7A-106FFDC3C4AC">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:42:55 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_CARGO" id="01AF66F1-408B-481F-1D19-14E8B3A957E8">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:42:55 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TIPO_TRABAJO" id="C9A5C035-C7CE-73DF-D08C-22DA5DDC59CB">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-07 17:39:43 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4D385B99-635A-8E49-C6C7-CE88222AF7D2" referredColumn="88DA7274-04A3-93FC-DC41-8AABB1D61CFC"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="684A864C-C7CD-DABF-8B0F-860F8470AA85" name="TBL_CARGOS_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:42:55 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="63080734-C56A-0984-9E7A-106FFDC3C4AC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="35E3EB4E-FE0B-72F9-9EFA-9941679304DF" name="TBL_CAR_TBL_T_TRA_FK">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-07 17:41:00 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C9A5C035-C7CE-73DF-D08C-22DA5DDC59CB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

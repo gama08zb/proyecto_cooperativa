@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="E148193B-A613-70A0-0CDD-5AD6D44D160D" name="TBL_EMPRESAS">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:38:40 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_EMPRESA" id="6EE75637-F0F1-5731-625D-ED1F32868828">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:40:57 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_EMPRESA" id="9C9E9618-9E6E-77D9-3344-E03D7F413E66">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:40:57 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<ownDataTypeParameters>150,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_DIRECCION" id="67782297-6D89-B737-73B9-949E4FFC0316">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:40:57 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="83465BEB-087A-355B-6D23-A2BBB10DEB0B" referredColumn="BBB43005-FFF5-E3DB-97E0-DB7AA4254016"/>
+</associations>
+</Column>
+<Column name="TELEFONO" id="B6DEBA63-4863-310C-1895-E640877542F6">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:40:57 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A5B48CB7-3FE3-12B1-E112-81C43D90BE3F" name="TBL_EMPRESAS_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:40:57 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6EE75637-F0F1-5731-625D-ED1F32868828"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0298B960-DAB6-82C0-C3EA-D50109F04078" name="TBL_EMPRESAS_TBL_DIRE_FK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:57:35 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="67782297-6D89-B737-73B9-949E4FFC0316"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

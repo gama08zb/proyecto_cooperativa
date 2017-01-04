@@ -1,0 +1,31 @@
+create or replace PROCEDURE SP_EMPRESA(
+      P_ID_DIRECCION INTEGER,
+      P_NOMBRE_EMPRESA VARCHAR2,
+      P_TELEFONO VARCHAR2,
+      P_MENSAJE OUT VARCHAR2
+  )AS
+     P_NUMERO_SECUENCIA INTEGER;
+  BEGIN
+     P_NUMERO_SECUENCIA:=SEQ_EMPRESA.NEXTVAL;
+    INSERT
+      INTO TBL_EMPRESAS
+        (
+          ID_EMPRESA,
+          NOMBRE_EMPRESA,
+          ID_DIRECCION,
+          TELEFONO
+        )
+        VALUES
+        (
+          P_NUMERO_SECUENCIA,
+          UPPER(P_NOMBRE_EMPRESA),
+          P_ID_DIRECCION,
+          P_TELEFONO
+        );
+      COMMIT;
+     P_MENSAJE:= P_NUMERO_SECUENCIA;
+    EXCEPTION 
+      WHEN OTHERS THEN 
+       P_MENSAJE:='ERROR: '||SQLCODE||SQLERRM;
+        ROLLBACK;
+    END;

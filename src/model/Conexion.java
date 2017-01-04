@@ -682,12 +682,10 @@ public class Conexion {
 						+" WHERE ID_PRESTAMO =  "+ numeroPrestamo);
 				resultadoTipoPrestamo.next();
 				if (resultadoTipoPrestamo.getInt("ID_FORMA_PAGO")==1){
-		            CallableStatement proc = conexion.prepareCall(" CALL SP_PAGAR_PRESTAMO_DIARIO(?,?,?,?,?) ");
+		            CallableStatement proc = conexion.prepareCall(" CALL SP_PAGAR_PRESTAMO_DIARIO(?,?,?) ");
 		            proc.setString("P_ID_PRESTAMO",numeroPrestamo);
 		            proc.registerOutParameter("P_MENSAJE", Types.VARCHAR);
 		            proc.setDouble("P_CUOTA", pagoPrestamo.getCuota());
-		            proc.setDouble("P_PAGO_CAPITAL", pagoPrestamo.getPagoCapital());
-		            proc.setDouble("P_INTERES", pagoPrestamo.getInteres());
 		            proc.execute();            
 		            return proc.getString("P_MENSAJE");
 				}else if (resultadoTipoPrestamo.getInt("ID_FORMA_PAGO")==2){
@@ -712,15 +710,32 @@ public class Conexion {
 	       }  
 	}
 	
-	public String pagarPrestamoAtrasado(String numeroPrestamo){
-	       try {            
-	            CallableStatement proc = conexion.prepareCall(" CALL SP_PAGAR_PRESTAMO_ATRASADO(?,?) ");
-	            proc.setString("P_ID_PRESTAMO",numeroPrestamo);
-	            proc.registerOutParameter("P_MENSAJE", Types.VARCHAR);
-	            proc.execute();            
-	            return proc.getString("P_MENSAJE");
+	public String pagarPrestamoAtrasado(String numeroPrestamo, PagoPrestamo pagoPrestamo){
+		 try {
+	    		Statement instruccion = conexion.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+				ResultSet resultadoTipoPrestamo = instruccion.executeQuery(
+						"SELECT ID_FORMA_PAGO "
+						+ " FROM TBL_PRESTAMOS "
+						+" WHERE ID_PRESTAMO =  "+ numeroPrestamo);
+				resultadoTipoPrestamo.next();
+				if (resultadoTipoPrestamo.getInt("ID_FORMA_PAGO")==2){
+					 CallableStatement proc = conexion.prepareCall(" CALL SP_PAGAR_PRESTAMO_MEN_ATRASADO(?,?) ");
+			         proc.setString("P_ID_PRESTAMO",numeroPrestamo);
+			         proc.registerOutParameter("P_MENSAJE", Types.VARCHAR);
+			         proc.execute();            
+			         return proc.getString("P_MENSAJE");
+				}else if (resultadoTipoPrestamo.getInt("ID_FORMA_PAGO")==3){
+					 CallableStatement proc = conexion.prepareCall(" CALL SP_PAGAR_PRESTAMO_MENSUAL_S_S(?,?) ");
+			            proc.setString("P_ID_PRESTAMO",numeroPrestamo);
+			            proc.registerOutParameter("P_MENSAJE", Types.VARCHAR);
+			            proc.execute();            
+			            return proc.getString("P_MENSAJE");
+				}else{
+					return null;
+				}
 	        } 
-	       catch (Exception e) {                  
+	       catch (Exception e) {
+	    	   System.out.println(e.getMessage());
 	            return null;
 	       }  
 	}

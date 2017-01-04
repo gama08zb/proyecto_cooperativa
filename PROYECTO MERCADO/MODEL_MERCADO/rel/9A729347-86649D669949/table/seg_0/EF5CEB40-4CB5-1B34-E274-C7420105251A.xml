@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EF5CEB40-4CB5-1B34-E274-C7420105251A" name="TBL_ESTADOS_PRESTAMOS">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 20:45:24 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_ESTADO_PRESTAMO" id="CF9705FF-4FA6-9774-70DF-FB951312BD3D">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 20:46:49 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ESTADO_PRESTAMO" id="D0229CBD-7395-F65D-7394-40C47D3233C3">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 20:46:49 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4E35D182-5D85-1527-A4D1-5D48132F1A1B" name="TBL_ESTADOS_PRESTAMOS_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 20:46:49 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CF9705FF-4FA6-9774-70DF-FB951312BD3D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0C2FCDBC-FCBF-995A-D4E7-D4CE61176D25" name="TBL_ESTADOS_CIVIL">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:22:37 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_ESTADO_CIVIL" id="E1098F34-81C2-4F31-2D22-3E1305CB31CA">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:24:05 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCION_ESTADO_CIVIL" id="23F4A57D-DCC5-7310-BD32-A4E9F6A4E71A">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:24:05 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="ECA654A9-6604-A597-9463-23A318F70998" name="TBL_ESTADO_CIVIL_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:24:05 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E1098F34-81C2-4F31-2D22-3E1305CB31CA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

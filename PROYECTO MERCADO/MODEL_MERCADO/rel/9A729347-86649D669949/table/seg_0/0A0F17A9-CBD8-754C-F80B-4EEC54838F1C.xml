@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0A0F17A9-CBD8-754C-F80B-4EEC54838F1C" name="TBL_TIPOS_TRABAJOS">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-07 17:40:02 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TIPO_TRABAJO" id="88DA7274-04A3-93FC-DC41-8AABB1D61CFC">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-07 17:40:51 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_TRABAJO" id="72D81254-222B-0056-EEB4-88F2AC515ACD">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-07 17:40:51 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B12F2964-9990-2132-A18C-907263CDD2AD" name="TBL_TIPOS_TRABAJOS_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-07 17:40:51 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88DA7274-04A3-93FC-DC41-8AABB1D61CFC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

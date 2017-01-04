@@ -1,0 +1,43 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="151538A0-38AA-9496-D4A3-E46D08AADFC6" name="TBL_TIPOS_CUENTAS">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 19:50:12 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_TIPO_CUENTA" id="1BA9E687-EF6D-9B7D-3145-E90B158C707B">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 19:51:41 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TIPO_CUENTA" id="42222605-3382-F75F-803A-56440C17875E">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 19:51:41 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D684EF26-FBDE-3740-DBC1-D403C6190E5D" name="TBL_TIPOS_CUENTAS_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 19:51:42 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1BA9E687-EF6D-9B7D-3145-E90B158C707B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

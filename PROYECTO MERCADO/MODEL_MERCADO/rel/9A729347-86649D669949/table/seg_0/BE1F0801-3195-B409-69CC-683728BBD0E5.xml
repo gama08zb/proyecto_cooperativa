@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BE1F0801-3195-B409-69CC-683728BBD0E5" name="TBL_PROFESIONES">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:25:22 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PROFESION" id="426370A4-049A-C527-C6CF-BFFE4E5AF955">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:26:33 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCION_PROFESION" id="5303BC2B-F1E3-3274-D512-8A81EB0A062E">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:26:33 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A74B0506-D046-F8EE-5769-505B95D9F692" name="TBL_PROFESIONES_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:26:33 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="426370A4-049A-C527-C6CF-BFFE4E5AF955"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

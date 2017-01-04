@@ -1,0 +1,53 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="45091A0E-1730-B6C9-AC55-EF585642F211" name="TBL_INFORMACION_PROYECTOS">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:17:39 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_INFORMACION_PROYECTO" id="42872757-E9D1-1361-DFF8-57F4A9C8E0FE">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:20:13 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_PROYECTO" id="CE2BB0B6-6F11-89A3-71FD-C4AAABC0F944">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:20:13 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>150</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCION" id="6CA46526-F778-3445-768A-47FF6BE67F3E">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:20:13 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3FC8DF94-BE1D-F597-9BCF-EA70E2185384" name="TBL_INFORMACION_PROYECTOS_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:20:13 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="42872757-E9D1-1361-DFF8-57F4A9C8E0FE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

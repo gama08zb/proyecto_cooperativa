@@ -1,0 +1,115 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2B031F07-2FA8-4C3E-2A1B-B229C20035A1" name="TBL_USUARIOS">
+<createdBy>Gama</createdBy>
+<createdTime>2016-02-28 23:11:41 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<ordsAlias>table_32</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_USUARIO" id="9186EE31-21FB-CDBA-70B9-9E5ED57F70D1">
+<createdBy>Gama</createdBy>
+<createdTime>2016-02-28 23:13:15 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="USUARIO" id="9DD6D172-72C6-18FF-BF05-E2B8A3E90AB5">
+<createdBy>Gama</createdBy>
+<createdTime>2016-02-28 23:13:15 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PASSWORD" id="2C220C16-A8CC-A320-9209-09BD02F8DF4C">
+<createdBy>Gama</createdBy>
+<createdTime>2016-02-28 23:13:15 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>3000</dataTypeSize>
+<ownDataTypeParameters>3000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TIPO_USUARIO" id="FB32DFD5-4878-2923-703A-4F22241F4076">
+<createdBy>Gama</createdBy>
+<createdTime>2016-02-28 23:14:49 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3D24376D-28AF-C620-EA19-D548C0857FFB" referredColumn="C67D3459-3C59-99BA-1A12-5BB400ECA0AD"/>
+</associations>
+</Column>
+<Column name="ID_EMPLEADO" id="6BFFD215-A99F-D11C-7467-1FB5B2565A06">
+<createdBy>Gama</createdBy>
+<createdTime>2016-02-28 23:16:06 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C71830FA-D795-62A0-7E41-CB8E204C970F" referredColumn="3E65AB22-1D0C-0F27-E116-DFE9C92668E4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="25F48717-CE24-C329-A408-E179F57CBF88" name="TBL_USUARIOS_PK">
+<createdBy>Gama</createdBy>
+<createdTime>2016-02-28 23:13:15 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9186EE31-21FB-CDBA-70B9-9E5ED57F70D1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9D68A384-0269-D135-8EE6-C08BF1A6C33B" name="TBL_USU_TBL_TI_USU_FK">
+<createdBy>Gama</createdBy>
+<createdTime>2016-02-28 23:14:49 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FB32DFD5-4878-2923-703A-4F22241F4076"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="001919C3-4442-8FCB-813C-56CE5A281D50" name="TBL_USU_TBL_EMP_FK">
+<createdBy>Gama</createdBy>
+<createdTime>2016-02-28 23:16:06 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6BFFD215-A99F-D11C-7467-1FB5B2565A06"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

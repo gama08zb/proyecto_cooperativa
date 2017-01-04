@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A85E9557-A8A4-E499-9D51-1E0C1E45F5E7" name="TBL_MUNICIPIOS">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:32:35 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_MUNICIPIO" id="D1E2816F-4351-703C-D46C-E56687223B86">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:33:51 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NOMBRE_MUNICIPIO" id="A6D73DAF-5A5A-FDC1-9D30-9B3A89C6848D">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:33:51 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ESTADO" id="42AC809B-AD87-AD24-537E-D2283A2791BC">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:33:51 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3E4D2521-E8C3-C574-2187-6E993A9F4854" referredColumn="31BD754B-8377-0604-5546-AF20D7E7BFF2"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="AF472474-4861-2194-C60F-483B6169E1E3" name="TBL_MUNICIPIOS_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:33:51 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D1E2816F-4351-703C-D46C-E56687223B86"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FE23C214-126C-7CCE-91B3-8C407B29A5E0" name="TBL_MUNICIPIOS_TBL_ESTADOS_FK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 18:52:46 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="42AC809B-AD87-AD24-537E-D2283A2791BC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

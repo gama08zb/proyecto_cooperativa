@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AEFAA913-8024-A80C-510E-A228D612A7FC" name="TBL_CUENTAS_AHORRO">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 19:39:54 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_CUENTA_AHORRO" id="DE31076A-BDBC-9A25-7BD6-9E2371CA9A21">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 19:43:53 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TIPO_CUENTA" id="A23E0812-9AE4-56F2-05B4-596C8B0AB793">
+<createdBy>Gama</createdBy>
+<createdTime>2016-02-26 23:16:29 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1915103D-11AA-1E9B-A66F-626FEB6E2B71" referredColumn="1BA9E687-EF6D-9B7D-3145-E90B158C707B"/>
+</associations>
+</Column>
+<Column name="FECHA_CREACION" id="AC2B3047-21B3-1928-EDA0-B7E8B823359A">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 19:43:53 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FECHA_FINALIZACION" id="F5993B75-CC6D-9F5A-E147-F5E7BA78AED5">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-11 01:00:19 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_ESTADO_CUENTA" id="71D0A381-AC18-0BF5-AE36-A50DAD800187">
+<createdBy>Gama</createdBy>
+<createdTime>2016-02-27 03:27:04 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FB751FEE-7F13-4746-93DE-A92188494274" referredColumn="E1B2729F-5879-7694-7326-E2BC8C6F2B8D"/>
+</associations>
+</Column>
+<Column name="NOMBRE_BENEFICIARIO" id="E56531A7-930E-369A-F8D6-913FFB7DA50C">
+<createdBy>Gama</createdBy>
+<createdTime>2016-02-27 03:57:53 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>500</dataTypeSize>
+<ownDataTypeParameters>500,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="CB1C05AE-BD5E-24C9-6585-65E3A6099692" name="TBL_CUETA_AHORRO_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 19:43:53 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DE31076A-BDBC-9A25-7BD6-9E2371CA9A21"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A937003A-7F9E-A885-C75C-BA0B1E35489D" name="TBL_CUE_TBL_TIPO_CUE_FK">
+<createdBy>Gama</createdBy>
+<createdTime>2016-02-26 23:16:29 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A23E0812-9AE4-56F2-05B4-596C8B0AB793"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AB7D4AB6-5ABA-9D9A-CA9B-D2C24B857BA4" name="TBL_CUE_AH_TBL_EST_CUE_AHO_FK">
+<createdBy>Gama</createdBy>
+<createdTime>2016-02-27 03:27:04 UTC</createdTime>
+<generatorID>Generado por el Usuario</generatorID>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="71D0A381-AC18-0BF5-AE36-A50DAD800187"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

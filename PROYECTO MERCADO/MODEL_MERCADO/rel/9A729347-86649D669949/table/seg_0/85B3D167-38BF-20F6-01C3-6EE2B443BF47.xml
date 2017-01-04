@@ -1,0 +1,68 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="85B3D167-38BF-20F6-01C3-6EE2B443BF47" name="TBL_DIRECCIONES">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:34:20 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_DIRECCION" id="BBB43005-FFF5-E3DB-97E0-DB7AA4254016">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:37:51 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRIPCION_DIRECCION" id="9A2AC3B6-E42C-2449-0FF1-5BAE18ADCB88">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:37:51 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300</dataTypeSize>
+<ownDataTypeParameters>300,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_COLONIA" id="F6A5BCC1-7D62-6A5E-0351-28BFC3E22B5B">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:37:51 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="9AA473FD-C4B0-1E4B-2382-12D76AAB1562" referredColumn="4F149F2F-C42D-028D-BA01-7C48AB35BE03"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="88E89887-E784-1C1F-CCBF-132054EF94C1" name="TBL_DIRECCIONES_PK">
+<createdBy>LARY</createdBy>
+<createdTime>2015-12-31 17:37:51 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BBB43005-FFF5-E3DB-97E0-DB7AA4254016"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="13610707-1619-F062-5DA9-300160DBF2C7" name="TBL_DIRECCIONES_TBL_COLO_FK">
+<createdBy>LARY</createdBy>
+<createdTime>2016-01-07 17:36:49 UTC</createdTime>
+<ownerDesignName>MODEL_MERCADO</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F6A5BCC1-7D62-6A5E-0351-28BFC3E22B5B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
