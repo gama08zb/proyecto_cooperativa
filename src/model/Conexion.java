@@ -925,4 +925,75 @@ public class Conexion {
 	
 	 }
 	
+	public void buscadorCliente(String busqueda, String tipoBusqueda, ObservableList<DetalleCliente> lista){
+		try {
+			Statement instruccion = conexion.createStatement();
+			if (tipoBusqueda.equals("Nombre del Cliente")){
+				ResultSet resultado = instruccion.executeQuery(
+						"SELECT NOMBRES||' '||APELLIDOS AS NOMBRE_COMPLETO, ID_CLIENTE FROM TBL_CLIENTES "
+						+ " WHERE NOMBRES LIKE '%"+busqueda+"%' OR APELLIDOS LIKE '%"+busqueda+"%'");
+						while(resultado.next()){
+							lista.add(new DetalleCliente(resultado.getString("NOMBRE_COMPLETO"),resultado.getString("ID_CLIENTE")));
+						}
+						
+			}else if (tipoBusqueda.equals("Numero de Identidad")){
+				ResultSet resultado = instruccion.executeQuery(
+					"SELECT NOMBRES||' '||APELLIDOS AS NOMBRE_COMPLETO, ID_CLIENTE FROM TBL_CLIENTES "
+					+ " WHERE NUMERO_IDENTIDAD LIKE '%"+busqueda+"%'");
+				while(resultado.next()){
+					lista.add(new DetalleCliente(resultado.getString("NOMBRE_COMPLETO"),resultado.getString("ID_CLIENTE")));
+				}
+			}else{
+				ResultSet resultado = instruccion.executeQuery(
+						"SELECT NOMBRES||' '||APELLIDOS AS NOMBRE_COMPLETO, ID_CLIENTE FROM TBL_CLIENTES ORDER BY FECHA_INGRESO ");
+				while(resultado.next()){
+					lista.add(new DetalleCliente(resultado.getString("NOMBRE_COMPLETO"),resultado.getString("ID_CLIENTE")));
+				}
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public void buscadorDetalleCliente(String numeroCliente, ObservableList<DetalleCliente> lista){
+		try {
+			lista.clear();
+			Statement instruccion = conexion.createStatement();
+			
+				ResultSet resultado = instruccion.executeQuery(
+						"SELECT CC.ID_CUENTA_AHORRO, TC.TIPO_CUENTA FROM TBL_CLIENTES_X_CUENTAS_AHORRO CC "
+						+" INNER JOIN TBL_CUENTAS_AHORRO  CA ON (CC.ID_CUENTA_AHORRO=CA.ID_CUENTA_AHORRO) "
+						+" INNER JOIN TBL_TIPOS_CUENTAS TC ON(CA.ID_TIPO_CUENTA=TC.ID_TIPO_CUENTA) "
+						+ " WHERE ID_ESTADO_CUENTA='1' AND ID_CLIENTE = "+numeroCliente);
+						while(resultado.next()){
+							lista.add(new DetalleCliente(
+									resultado.getString("ID_CUENTA_AHORRO"),
+									"CUENTA DE AHORRO",
+									resultado.getString("TIPO_CUENTA")));
+						}
+				ResultSet resultadoPrestamos = instruccion.executeQuery(
+						"SELECT CS.ID_CLIENTE, CS.ID_SOLICITUD, S.ID_PRESTAMO,  FP.FORMA_PAGO FROM TBL_CLIENTES_X_SOLICITUDES CS "
+						+" INNER JOIN TBL_SOLICITUDES S ON (CS.ID_SOLICITUD= S.ID_SOLICITUD) "
+						+" INNER JOIN TBL_PRESTAMOS P ON (S.ID_PRESTAMO=P.ID_PRESTAMO) "
+						+" INNER JOIN TBL_FORMAS_PAGO FP ON (P.ID_FORMA_PAGO=FP.ID_FORMA_PAGO) "
+						+ " WHERE S.ID_PRESTAMO IS NOT NULL AND ID_CLIENTE = "+numeroCliente);
+						while(resultadoPrestamos.next()){
+							lista.add(new DetalleCliente(
+									resultadoPrestamos.getString("ID_SOLICITUD"),
+									"Numero de Solicitud",
+									resultadoPrestamos.getString("FORMA_PAGO")));
+							lista.add(new DetalleCliente(
+									resultadoPrestamos.getString("ID_PRESTAMO"),
+									"Numero de Prestamo",
+									resultadoPrestamos.getString("FORMA_PAGO")));
+						}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
 }

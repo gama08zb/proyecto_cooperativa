@@ -21,6 +21,7 @@ public class Main extends Application {
 	private Stage frmDepositar;
 	private Stage frmRetirar;
 	private Stage frmPagarPrestamo;
+	private Stage frmBuscadorCliente;
 	private PrincipalController controladorPrincipal;
 	private LoginController controladorLogin;
 	private EditarClienteController editarClienteController;
@@ -31,7 +32,7 @@ public class Main extends Application {
 	private DepositoController depositoController;
 	private RetiroController retiroController;
 	private PagarPrestamoController pagarPrestamoController;
-
+	private BuscadorClienteController buscadorClienteController;
 	@Override
 	public void start(Stage primaryStage) {
 		frmLogin = primaryStage;
@@ -273,4 +274,31 @@ public class Main extends Application {
 		}
 		frmPagarPrestamo.show();
 	}
+	
+	public void abrirFormularioBuscadorCliente() {
+		if (buscadorClienteController == null) {
+			imageIcono = new Image("application/Image/icono.png");
+			try {
+				frmBuscadorCliente = new Stage();
+				frmBuscadorCliente.initOwner(frmPrincipal);
+				frmBuscadorCliente .initModality(Modality.WINDOW_MODAL);
+				FXMLLoader loader = new FXMLLoader();
+				loader.setLocation(getClass().getResource("BuscarCliente.fxml"));
+				AnchorPane root = (AnchorPane) loader.load();
+				Scene scene = new Scene(root);
+				scene.getStylesheets().add(getClass().getResource("styleCliente.css").toExternalForm());
+				buscadorClienteController = loader.getController();
+				buscadorClienteController.setMain(this);
+				frmBuscadorCliente.setScene(scene);
+				frmBuscadorCliente.setTitle("Buscador");
+				frmBuscadorCliente.getIcons().add(imageIcono);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		frmBuscadorCliente.show();
+	}
+	
+	
+	
 }

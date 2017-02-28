@@ -2,6 +2,8 @@ package application;
 
 import java.net.URL;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -21,6 +23,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import model.Conexion;
 
 import model.DetallePrestamo;
+import model.JasperReportX;
 import model.PagoPrestamo;
 
 public class PagarPrestamoController implements Initializable {
@@ -119,6 +122,10 @@ public class PagarPrestamoController implements Initializable {
 					cuadroDialogo.setTitle("Error");
 					cuadroDialogo.setHeaderText("Error ");
 					cuadroDialogo.showAndWait();
+					Map<String, Object> parametros = new HashMap<String, Object>();
+					parametros.put("ptrNumeroRecibo", txtNumeroPrestamo.getText());
+					JasperReportX.crearReport(conexion.getConexion(), "C:\\Report\\ReciboPrestamoDiarios.jasper",parametros);
+					JasperReportX.showViewer();
 				} else {
 					if (mensaje.substring(0,1).equals("1")){}
 					conexion = new Conexion();
@@ -129,6 +136,10 @@ public class PagarPrestamoController implements Initializable {
 					cuadroDialogo.setTitle("INFORMACION");
 					cuadroDialogo.setHeaderText("INFORMACION ");
 					cuadroDialogo.showAndWait();
+					Map<String, Object> parametros = new HashMap<String, Object>();
+					parametros.put("ptrNumeroRecibo", txtNumeroPrestamo.getText());
+					JasperReportX.crearReport(conexion.getConexion(), "C:\\Report\\ReciboPrestamoDiarios.jasper",parametros);
+					JasperReportX.showViewer();
 				}
 			} else {
 				Alert cuadroDialogo = new Alert(AlertType.INFORMATION);
@@ -136,6 +147,10 @@ public class PagarPrestamoController implements Initializable {
 				cuadroDialogo.setTitle("INFORMACION");
 				cuadroDialogo.setHeaderText("INFORMACION ");
 				cuadroDialogo.showAndWait();
+				Map<String, Object> parametros = new HashMap<String, Object>();
+				parametros.put("ptrNumeroRecibo", txtNumeroPrestamo.getText());
+				JasperReportX.crearReport(conexion.getConexion(), "C:\\Report\\ReciboPrestamoDiarios.jasper",parametros);
+				JasperReportX.showViewer();
 			}
 		}else if (pagoPrestamo.getCodigoFormaPago()==2){
 			String mensaje = conexion.pagarPrestamo(txtNumeroPrestamo.getText(), pagoPrestamo);

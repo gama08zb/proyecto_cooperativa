@@ -32,6 +32,7 @@ public class PrincipalController implements Initializable {
 	private Image imagePagarPrestamo;
 	private Image imageNuevoCuentaAhorroF;
 	private Image imageNuevoPrestamoF;
+	private Image imageBuscarCliente;
 	@FXML private ImageView ivCliente;
 	@FXML private ImageView ivCuentaAhorro;
 	@FXML private ImageView ivSolicitudPrestamos;
@@ -52,6 +53,7 @@ public class PrincipalController implements Initializable {
 	@FXML private ImageView ivNuevoCuentaAhorro2;
 	@FXML private ImageView ivNuevoSolicitudPrestamo2;
 	@FXML private ImageView ivNuevoPrestamo2;
+	@FXML private ImageView ivBuscarCliente;
 	@FXML private Label lblFooter;
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
@@ -90,6 +92,7 @@ public class PrincipalController implements Initializable {
 		imageNuevoSolicitud= new Image("application/Image/agregarSolicitud.png");
 		imageNuevoPrestamo= new Image("application/Image/agregarPrestamo.png");
 		imageEliminarCliente= new Image("application/Image/eliminarCliente.png");
+		imageBuscarCliente= new Image("application/Image/buscarCliente.png");
 		ivCliente.setImage(imageCliente);
 		ivCuentaAhorro.setImage(imageCuentaAhorro);
 		ivSolicitudPrestamos.setImage(imageSolicitudPrestamo);
@@ -110,6 +113,7 @@ public class PrincipalController implements Initializable {
 		ivDepositar.setImage(imageDepositar);
 		ivRetirar.setImage(imageRetirar);
 		ivPagarPrestamo.setImage(imagePagarPrestamo);
+		ivBuscarCliente.setImage(imageBuscarCliente);
 	}
 	
 	public Main getMain() {
@@ -131,6 +135,11 @@ public class PrincipalController implements Initializable {
 	@FXML
 	public void abrirFormularioAgregarCliente(){
 		main.abrirFormularioAgregarCliente();
+	}
+	
+	@FXML
+	public void abrirFormularioBuscarCliente(){
+		main.abrirFormularioBuscadorCliente();
 	}
 	
 	@FXML

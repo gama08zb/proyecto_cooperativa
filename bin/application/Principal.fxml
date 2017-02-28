@@ -61,7 +61,7 @@
                                     <ImageView fx:id="ivNuevoCliente2" fitHeight="42.0" fitWidth="230.0" onMouseClicked="#abrirFormularioAgregarCliente" onMouseExited="#agregarCliente" onMouseMoved="#agregarClienteOscuro" pickOnBounds="true" preserveRatio="true" />
                                     <ImageView fx:id="ivEditarCliente2" fitHeight="42.0" fitWidth="230.0" onMouseClicked="#abrirFormularioEditarCliente" onMouseExited="#editarCliente" onMouseMoved="#editarClienteOscuro" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1" />
                                     <ImageView fx:id="ivEliminarCliente2" fitHeight="42.0" fitWidth="230.0" onMouseClicked="#abrirFormularioEditarCliente" onMouseExited="#eliminarCliente" onMouseMoved="#eliminarClienteOscuro" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2" />
-                                    <ImageView fitHeight="42.0" fitWidth="230.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" />
+                                    <ImageView fx:id="ivBuscarCliente" fitHeight="42.0" fitWidth="230.0" onMouseClicked="#abrirFormularioBuscarCliente" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3" />
                                  </children>
                               </GridPane>
                            </children></AnchorPane>
